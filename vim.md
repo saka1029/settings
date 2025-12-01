@@ -42,3 +42,59 @@ autocmd InsertLeave,CmdwinLeave * call system('fcitx-remote -c')
 " ハイフンで編集中ファイルのディレクトリに移動する
 nnoremap - :<C-u>e %:h<Cr>
 ```
+
+## コマンド名 | 取得できる情報
+
+expand("%") | ディレクトリ/名前(現在のディレクトリを基準)
+expand('%:p") | フルパス
+expand('%:p:h") | ディレクトリ
+expand('%:t") | ファイル名
+expand('%:r") | 拡張子なしのファイル名
+expand('%:e") | 拡張子
+
+## vimクリップボード
+
+ヤンク(y)コマンドでクリップボードに貼り付けるにはvim-gtkが必要。
+```
+sudo apt install vim-gtk
+```
+or
+```
+sudo apt install vim-gtk3
+```
+
+.vimrcに以下を記述する。
+```
+set clipboard=unnamedplus
+```
+
+## vim ESCでIMEを抜ける
+
+.vimrcに以下を追記。
+
+```
+augroup VIMRC
+    if has('unix') " インサート・モードを抜けた時は必ず日本語 OFF
+        autocmd InsertLeave,CmdwinLeave * call system('fcitx-remote -c')
+    endif
+augroup END
+```
+
+「autocmd」の行だけでもよい。
+「has(x)」の引数は'win64`でwindowsとなる。
+
+fcitx-remoteのオプションは以下のとおり。
+
+```
+Usage: fcitx-remote [OPTION]
+	-c		inactivate input method
+	-o		activate input method
+	-r		reload fcitx config
+	-t,-T		switch Active/Inactive
+	-e		Ask fcitx to exit
+	-a		print fcitx's dbus address
+	-m <imname>	print corresponding addon name for im
+	-s <imname>	switch to the input method uniquely identified by <imname>
+	[no option]	display fcitx state, 0 for close, 1 for inactive, 2 for acitve
+	-h		display this help and exit
+```
