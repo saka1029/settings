@@ -42,6 +42,8 @@ autocmd InsertLeave,CmdwinLeave * call system('fcitx-remote -c')
 " autocmd Filetype * set formatoptions-=r
 " ハイフンで編集中ファイルのディレクトリに移動する
 nnoremap - :<C-u>e %:h<Cr>
+" ディレクトリ編集でバナーを消す
+let g:netrw_banner = 0
 ```
 
 ## コマンド名 | 取得できる情報
