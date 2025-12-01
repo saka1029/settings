@@ -42,5 +42,3 @@ autocmd InsertLeave,CmdwinLeave * call system('fcitx-remote -c')
 " ハイフンで編集中ファイルのディレクトリに移動する
 nnoremap - :<C-u>e %:h<Cr>
 ```
-
-<img width="672" height="454" alt="image" src="https://github.com/user-attachments/assets/de79e235-1821-4bec-a091-a6340773519f" />
