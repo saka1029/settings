@@ -14,3 +14,16 @@ gsettings reset org.gnome.desktop.input-sources xkb-options
 ```
 LANG=C xdg-user-dirs-gtk-update
 ```
+
+## HomeキーをBackSpaceに変更 (Linux mintのみ？)
+
+```
+sudo cp /usr/share/X11/xkb/symbols/pc /usr/share/X11/xkb/symbols/pc.bak
+sudo vi /usr/share/X11/xkb/symbols/pc
+```
+
+```
+  key <HOME> {[  Home    ]};
+→
+  key <HOME> {[  BackSpace    ]};
+```
