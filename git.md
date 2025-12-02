@@ -39,7 +39,7 @@ git remote -v
 
 git remote set-url origin {new url}
 
-# minipc ドライブパス
+## minipc ドライブパス
 
 D=/srv/dev-disk-by-uuid-B45EDCD75EDC9388/
 WDSSD4T=/srv/dev-disk-by-uuid-8C04A56804A5564C/
@@ -47,7 +47,6 @@ WDBLUE=/srv/dev-disk-by-uuid-A676F8A876F87A7F/
 BUR2T=/srv/dev-disk-by-uuid-0A72FB3772FB25DB/
 SDCARD=/srv/dev-disk-by-uuid-DAE47F04E47EE265/
 BACKUP_MINIPC_D=/srv/dev-disk-by-uuid-5E10649B10647C41/BACKUP-MINIPC-D/
-
 
 ## MINIPCの$D/gitの下にbare repository 新規作成
 
