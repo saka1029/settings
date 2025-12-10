@@ -50,3 +50,20 @@ sudo update-grub
 ```
 
 再起動する。
+
+## コマンドによる画面回転
+
+コマンドで回転作業を行う場合は、
+
+```
+xrandr -o right
+```
+```
+xrandr -o left
+```
+```
+xrandr -o inverted
+```
+```
+xrandr -o normal
+```
