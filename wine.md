@@ -14,6 +14,12 @@ dataにある以下のファイルを
 ```
 ~/.wine/drive_c/windows/Fonts
 ```
+## 画面解像度の設定
+```
+winecfg
+```
+
+<img width="879" height="868" alt="image" src="https://github.com/user-attachments/assets/86b95e10-afae-423c-81e7-bf6795d5c201" />
 
 ## Paint Shop Pro 9インストール
 
