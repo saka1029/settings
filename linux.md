@@ -37,7 +37,7 @@ sudo vi /etc/default/grub
 ```
 
 10行目あたりに「GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"」と書かれた行があるので、
-そこに以下のように「 acpi_backlight=video acpi_osi=!!」を付け加えて保存します。
+以下のように「 acpi_backlight=video acpi_osi=!!」を付け加えて保存する。
 
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_backlight=video acpi_osi=!!"
