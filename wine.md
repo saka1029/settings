@@ -4,7 +4,7 @@
 
 一度```winecfg```を起動する。
 
-以下のファイル(dataにある)を
+dataにある以下のファイルを
 
 * msgothic.ttc
 * msmincho.ttc
