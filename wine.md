@@ -19,7 +19,7 @@ dataにある以下のファイルを
 winecfg
 ```
 
-<img width="879" height="868" alt="image" src="https://github.com/user-attachments/assets/86b95e10-afae-423c-81e7-bf6795d5c201" />
+<img width="500" height="495" alt="image" src="https://github.com/user-attachments/assets/86b95e10-afae-423c-81e7-bf6795d5c201" />
 
 ## Paint Shop Pro 9インストール
 
