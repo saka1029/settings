@@ -27,3 +27,26 @@ sudo vi /usr/share/X11/xkb/symbols/pc
 →
   key <HOME> {[  BackSpace    ]};
 ```
+
+## 輝度調整できない場合（Let's Note + Linux Mintのみ？）
+
+Grubの設定ファイルを開く。
+
+```
+sudo vi /etc/default/grub
+```
+
+10行目あたりに「GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"」と書かれた行があるので、
+そこに以下のように「 acpi_backlight=video acpi_osi=!!」を付け加えて保存します。
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_backlight=video acpi_osi=!!"
+```
+
+Grubを更新する。
+
+```
+sudo update-grub
+```
+
+再起動する。
