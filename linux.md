@@ -15,6 +15,14 @@ gsettings reset org.gnome.desktop.input-sources xkb-options
 LANG=C xdg-user-dirs-gtk-update
 ```
 
+## 日付書式
+
+2025-12-11 木曜日 12:41
+
+```
+%Y-%m-%e %A %H:%M
+```
+
 ## HomeキーをBackSpaceに変更 (Linux mintのみ？)
 
 ```
