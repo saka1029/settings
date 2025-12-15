@@ -23,6 +23,12 @@ LANG=C xdg-user-dirs-gtk-update
 %Y-%m-%e %A %H:%M
 ```
 
+## Javaバージョン切り替え
+
+```
+sudo update-alternatives --config java
+```
+
 ## HomeキーをBackSpaceに変更 (Linux mintのみ？)
 
 ```
