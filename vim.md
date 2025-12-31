@@ -21,6 +21,8 @@ set belloff=all
 
 " yankでクリップボードに貼り付ける。(vm-gtk3が必要)
 set clipboard=unnamedplus
+" yankでクリップボードに貼り付ける。(windows)
+set clipboard=unmamed,autoselect
 
 " CTRL-X are Cut
 " vnoremap <C-X> "+x
