@@ -81,3 +81,33 @@ xrandr -o inverted
 ```
 xrandr -o normal
 ```
+
+## mDNS有効化
+
+avahi-daemonをインストールする。
+
+```
+sudo apt update
+sudo apt install avahi-daemon
+sudo systemctl start avahi-daemon
+sudo systemctl enable avahi-daemon
+```
+
+## ホストネームの変更
+
+ホストネームを変更する場合は下記手順で変更できる
+
+```
+sudo hostnamectl set-hostname <新しいホストネーム>
+sudo vim /etc/hosts # 127.0.0.1 <新しいホストネーム> に変更
+```
+
+## mDNSの許可
+
+そのままだと、mDNSの問い合わせがファイアウォールに弾かれてしまうため、
+mDNSで利用するUDPの5353番ポートを開放する。
+ここでは、ufwの有効化方法については記載しない。
+
+```
+sudo ufw allow mdns
+```
