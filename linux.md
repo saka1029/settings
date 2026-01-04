@@ -23,6 +23,12 @@ LANG=C xdg-user-dirs-gtk-update
 %Y-%m-%e %A %H:%M
 ```
 
+## locale変更
+
+```
+localectl set-locale LANG=ja_JP.UTF-8
+```
+
 ## Javaバージョン切り替え
 
 ```
