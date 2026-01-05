@@ -17,10 +17,10 @@ LANG=C xdg-user-dirs-gtk-update
 
 ## 日付書式
 
-2025-12-11 木曜日 12:41
+2026-01-05 月 21:50
 
 ```
-%Y-%m-%e %A %H:%M
+%Y-%m-%d %a %H:%M
 ```
 
 ## locale変更
