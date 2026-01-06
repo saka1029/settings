@@ -13,6 +13,7 @@ a2enmod cgi alias env rewrite
 基本的なセットアップを実行したら、Apache の設定ファイルに以下を追加してください。
 
 /etc/httpd/conf/httpd.conf
+(/etc/apache2/apache2.conf)
 ```
 <Directory "/usr/lib/git-core">
     Require all granted
