@@ -12,7 +12,7 @@ a2enmod cgi alias env rewrite
 また、/srv/git ディレクトリのグループを www-data に変更しなければなりません。CGIスクリプトを実行するApacheのインスタンスはデフォルトではそのグループの1ユーザーとして実行されるからです。設定を変更しておけば、ウェブサーバーは自由にリポジトリを読み書きできるようになります。
 
 ```
- chgrp -R www-data /srv/git
+sudo chgrp -R www-data /srv/git
 ```
 
 基本的なセットアップを実行したら、Apache の設定ファイルに以下を追加してください。
