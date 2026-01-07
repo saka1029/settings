@@ -47,7 +47,7 @@ RewriteRule ^/git/ - [E=AUTHREQUIRED]
 </Files>
 ```
 
-さらに、対象ユーザー全員のパスワードが記述された .htaccess ファイルが必要です。ユーザー “schacon” を追加したい場合は、このようなコマンドを実行します。
+さらに、対象ユーザー全員のパスワードが記述された .htaccess ファイルが必要。ユーザー “schacon” を追加したい場合は、このようなコマンドを実行すｒ。-cオプションはファイルを新規作成する。ユーザを追加する場合は-cオプションを外す。
 
 ```
 htpasswd -c /opt/git/.htpasswd schacon
