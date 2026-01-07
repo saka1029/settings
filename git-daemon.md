@@ -41,7 +41,9 @@ apt install git-daemon-sysvinit
 ```
 
 スクリプト"/etc/init.d/git-daemon"ができているので
-少なくとも以下のような設定になるよう修正します。
+少なくとも以下のような設定になるよう修正する。
+`GIT_DAEMON_OPTIONS`の設定で自動的にexportされ、pushも可となるはず。
+
 
 ```
 GIT_DAEMON_USER=gitdaemon
