@@ -7,18 +7,20 @@ localプロトコルでは 使用可能であることを前提とします。
 
 まずはサーバ側で以下を実行します。
 ```
-server$ cd /opt/git/test.git
-server$ touch git-daemon-export-ok                                      # export可とする
-server$ git config --global --add safe.directory /opt/git/test.git      # 参照可とする
-server$ git config daemon.receivepack true                              # pushで更新可とする
-server$ git daemon --base-path=/opt/git /opt/git                        # git-daemon起動
-server$ sudo chown -R gitdaemon /opt/git                                # 所有者変更
+server$ cd /opt/git
+server$ git init --bare --shared test.git             # repository初期化
+server$ cd test.git　　　　　　　　　　　　　　　　　　　　　# repositoryに入る
+server$ touch git-daemon-export-ok                    # export可とする
+server$ git config --global --add safe.directory .    # 参照可とする
+server$ git config daemon.receivepack true            # pushで更新可とする
+server$ sudo chown -R gitdaemon /opt/git              # 所有者変更
+server$ git daemon --base-path=/opt/git /opt/git      # git-daemon起動
 ```
 
 続いてクライアント側で以下を実行します。
 
 ```
-client$ cd ~
+client$ cd
 client$ mkdir git
 client$ cd git
 client$ git clone git://<サーバの名前やIPアドレス>/test.git
