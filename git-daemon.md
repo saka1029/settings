@@ -9,6 +9,7 @@ localプロトコルでは 使用可能であることを前提とします。
 ```
 server$ cd /opt/git/test.git
 server$ touch git-daemon-export-ok
+server$ git config --global --add safe.directory /opt/git/test.git
 server$ git daemon --base-path=/opt/git /opt/git
 ```
 
