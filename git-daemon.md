@@ -54,6 +54,13 @@ GIT_DAEMON_BASE_PATH=/opt/git
 GIT_DAEMON_DIRECTORY=/opt/git
 ```
 
+git-daemonはユーザーgitdaemonで実行されるので、リポジトリの所有者を変更する。
+
+```
+cd /opt
+chown -R gitdaemon git
+```
+
 最後に以下を実行して完了です。
 
 ```
