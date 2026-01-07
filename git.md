@@ -11,11 +11,6 @@
 [core] 
     quotepath = false
 ```
-## ユーザー設定
-```
-git config --global user.name saka1029
-git config --global user.email saka1029@gmail.com
-```
 
 ## mine クローン
 ```
