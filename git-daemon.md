@@ -8,8 +8,9 @@ localプロトコルでは 使用可能であることを前提とします。
 まずはサーバ側で以下を実行します。
 ```
 server$ cd /opt/git/test.git
-server$ touch git-daemon-export-ok
-server$ git config --global --add safe.directory /opt/git/test.git
+server$ touch git-daemon-export-ok                                      # export可とする
+server$ git config --global --add safe.directory /opt/git/test.git      # 参照可とする
+server$ git config daemon.receivepack true                              # pushで更新できるようにする
 server$ git daemon --base-path=/opt/git /opt/git
 ```
 
