@@ -58,6 +58,32 @@ update-rc.d git-daemon defaults
 
 ## debian openmediavaultの場合
 
+***!!! 以下はうまくいかない !!!***
+
+```
+sudo apt install git-daemon-sysvinit
+```
+
+`/etc/default/git-daemon`を編集する。
+
+```
+# Defaults for git-daemon initscript 
+# sourced by /etc/init.d/git-daemon 
+# installed at /etc/default/git-daemon by the maintainer scripts 
+ 
+# 
+# This is a POSIX shell fragment 
+# 
+ 
+GIT_DAEMON_ENABLE=true
+GIT_DAEMON_USER=gitdaemon 
+GIT_DAEMON_BASE_PATH=/srv/dev-disk-by-uuid-B45EDCD75EDC9388/git
+GIT_DAEMON_DIRECTORY=/srv/dev-disk-by-uuid-B45EDCD75EDC9388/git
+ 
+# Additional options that are passed to the Daemon. 
+GIT_DAEMON_OPTIONS="--eport-all --enable=receive-pack"
+```
+
 `git-daemon-run`をインストールする。
 
 ```
