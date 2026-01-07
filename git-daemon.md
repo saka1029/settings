@@ -48,6 +48,7 @@ GIT_DAEMON_USER=gitdaemon
 GIT_DAEMON_ENABLE=true
 GIT_DAEMON_BASE_PATH=/opt/git
 GIT_DAEMON_DIRECTORY=/opt/git
+GIT_DAEMON_OPTIONS="--eport-all --enable=receive-pack"
 ```
 
 最後に以下を実行して完了です。
