@@ -63,3 +63,15 @@ systemctl restart apache2
 ユーザー認証を Apache で実施する方法はたくさんあります。 ひとつ選んで設定してください。 ここでは、思いつく限り一番シンプルな方法を説明しました。 また、HTTP 通信が SSL 経由で行われるように設定しましょう。 そうすれば、データはすべて暗号化されます。
 
 ここでは、Apache 設定の詳細についてはあえて立ち入らないようにしました。 Apache 以外の ウェブサーバーを使う場合もあるでしょうし、認証の要求も多様だからです。 覚えておいてほしいのは、Git には git-http-backend という CGI スクリプトが付属していることです。 それが実行されると、HTTP 経由でデータを送受信する際のネゴシエーションを処理してくれます。 このスクリプト自体は認証の仕組みを備えてはいませんが、ウェブサーバーの機能で認証は簡単に管理できます。 CGI に対応している ウェブサーバーであればどれも使っても構いません。一番使い慣れたものを使うのがよいでしょう。
+
+## クライアントからのアクセス
+
+cloneしたときに、以下のように認証が必要となるらしい。
+
+```
+$ git clone http://git.localhost/project.git .
+Cloning into '.'...
+Username for 'http://git.localhost': user
+Password for 'http://user@git.localhost':
+Checking connectivity... done.
+```
