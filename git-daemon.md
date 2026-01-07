@@ -10,8 +10,9 @@ localプロトコルでは 使用可能であることを前提とします。
 server$ cd /opt/git/test.git
 server$ touch git-daemon-export-ok                                      # export可とする
 server$ git config --global --add safe.directory /opt/git/test.git      # 参照可とする
-server$ git config daemon.receivepack true                              # pushで更新できるようにする
-server$ git daemon --base-path=/opt/git /opt/git
+server$ git config daemon.receivepack true                              # pushで更新可とする
+server$ git daemon --base-path=/opt/git /opt/git                        # git-daemon起動
+server$ sudo chown -R gitdaemon /opt/git                                # 所有者変更
 ```
 
 続いてクライアント側で以下を実行します。
@@ -25,17 +26,7 @@ client$ git clone git://<サーバの名前やIPアドレス>/test.git
 
 これで"test"ディレクトリができており、これが空のリポジトリになっているので、
 ここにファイルを登録するなどすることになります。
-ネット越しなのに認証なしでアクセスできますが、
-標準では"git push"できないのでセキュリティは担保できます。
-読み込み専用ということですね。
-ただしpushは以下で有効にはできます。
-
-```
-server$ cd /opt/git/test.git
-server$ git config daemon.receivepack true
-```
-
-用途に合わせて設定すればいいでしょう。
+ネット越しなのに認証なしでアクセスできる。
 
 なお、このままだとサーバ側の"git daemon"を止めると
 gitプロトコルでのアクセスができなくなります。
@@ -51,16 +42,10 @@ apt install git-daemon-sysvinit
 少なくとも以下のような設定になるよう修正します。
 
 ```
+GIT_DAEMON_USER=gitdaemon
 GIT_DAEMON_ENABLE=true
 GIT_DAEMON_BASE_PATH=/opt/git
 GIT_DAEMON_DIRECTORY=/opt/git
-```
-
-git-daemonはユーザーgitdaemonで実行されるので、リポジトリの所有者を変更する。
-
-```
-cd /opt
-chown -R gitdaemon git
 ```
 
 最後に以下を実行して完了です。
