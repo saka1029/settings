@@ -1,0 +1,3 @@
+# raspberry pi zero w
+
+[【Raspberry Pi】USB On-The-Goでパソコンと接続してRaspberry Pi を使う！](https://karakuri-musha.com/inside-technology/02-raspi-otg-setting)
