@@ -101,7 +101,7 @@ exec 2>&1
 echo 'git-daemon starting.' 
 exec chpst -ugitdaemon \ 
   "$(git --exec-path)"/git-daemon --verbose --reuseaddr \ 
-    --export-all \ 
+    --export-all --enable=receive-pack \ 
     --base-path=/srv/dev-disk-by-uuid-B45EDCD75EDC9388 /srv/dev-disk-by-uuid-B45EDCD75EDC9388/git 
 #   --base-path=/var/lib /var/lib/git
 ```
