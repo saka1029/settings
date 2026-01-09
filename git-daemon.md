@@ -56,7 +56,7 @@ GIT_DAEMON_OPTIONS="--export-all --enable=receive-pack"
 最後に以下を実行して完了です。
 
 ```
-update-rc.d git-daemon defaults
+sudo update-rc.d git-daemon defaults
 ```
 
 ## debian openmediavaultの場合
