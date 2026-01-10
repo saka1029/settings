@@ -91,6 +91,24 @@ GIT_DAEMON_OPTIONS="--export-all --enable=receive-pack"
 ```
 ## raspberry pi zero 2 w
 
+`/opt/git`を作成し、誰でも書き込めるようにする。
+
+```
+saka1029@rasp:/opt/git $ ls -la
+total 12
+drwxrwxrwx 3 root     root     4096 Jan 10 14:40 .
+drwxr-xr-x 3 root     root     4096 Jan 10 14:39 ..
+drwxrwsr-x 7 saka1029 saka1029 4096 Jan 10 16:15 test.git
+```
+リポジトリを作成する。
+
+```
+cd /opt/git
+git init --bare --shared test.git             # repository初期化
+cd test.git　　　　　　　　　　　　　　　　　　　　　# repositoryに入る
+git config --global --add safe.directory .    # 参照可とする
+```
+
 サービスの定義ファイルを作成する。
 
 ```
