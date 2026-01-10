@@ -19,7 +19,7 @@ server$ git daemon --base-path=/opt/git /opt/git      # git-daemon起動
 
 続いてクライアント側で以下を実行します。
 
-```
+```/srv/dev-disk-by-uuid-B45EDCD75EDC9388/git/srv/dev-disk-by-uuid-B45EDCD75EDC9388/git
 client$ cd
 client$ mkdir git
 client$ cd git
@@ -84,7 +84,7 @@ GIT_DAEMON_BASE_PATH=/srv/dev-disk-by-uuid-B45EDCD75EDC9388/git
 GIT_DAEMON_DIRECTORY=/srv/dev-disk-by-uuid-B45EDCD75EDC9388/git
  
 # Additional options that are passed to the Daemon. 
-GIT_DAEMON_OPTIONS="--eport-all --enable=receive-pack"
+GIT_DAEMON_OPTIONS="--export-all --enable=receive-pack"
 ```
 
 `git-daemon-run`をインストールする。
