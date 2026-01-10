@@ -1,4 +1,4 @@
-# git
+i# git
 
 ## .gitconfig
 
@@ -12,24 +12,12 @@
     quotepath = false
 ```
 
-## mine クローン
+## mine, epub, miz, sozoku クローン
 ```
-git clone saka1029@minipc.local:/srv/dev-disk-by-uuid-B45EDCD75EDC9388/git/mine.git
-```
-
-## epub クローン
-```
-git clone saka1029@minipc.local:/srv/dev-disk-by-uuid-B45EDCD75EDC9388/git/epub.git
-```
-
-## mizクローン
-```
-git clone saka1029@minipc.local:/srv/dev-disk-by-uuid-B45EDCD75EDC9388/git/miz.git
-```
-
-## 文字化け
-```
-git config --global core.quotepath false
+git clone git://minipc.local/mine.git
+git clone git://minipc.local/epub.git
+git clone git://minipc.local/miz.git
+git clone git://minipc.local/sozoku.git
 ```
 
 ## 現在のリモートURL確認
@@ -61,11 +49,11 @@ cd $D/git
 git init --bare --shared NAME.git
 cd NAME.git
 git config --global --add safe.directory .
-
+git config daemon.receivepack true            # pushで更新可とする
 ```
 
 ### クライアント側
 ```
 cd git
-git clone saka1029@minipc.local:/srv/dev-disk-by-uuid-B45EDCD75EDC9388/git/NAME.git 
+git clone git://minipc.local/NAME.git 
 ```
