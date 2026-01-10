@@ -61,7 +61,6 @@ sudo update-rc.d git-daemon defaults
 
 ## debian openmediavaultの場合
 
-***!!! 以下はうまくいかない !!!***
 
 ```
 sudo apt install git-daemon-sysvinit
@@ -79,7 +78,7 @@ sudo apt install git-daemon-sysvinit
 # 
  
 GIT_DAEMON_ENABLE=true
-GIT_DAEMON_USER=gitdaemon 
+GIT_DAEMON_USER=root 
 GIT_DAEMON_BASE_PATH=/srv/dev-disk-by-uuid-B45EDCD75EDC9388/git
 GIT_DAEMON_DIRECTORY=/srv/dev-disk-by-uuid-B45EDCD75EDC9388/git
  
@@ -87,21 +86,6 @@ GIT_DAEMON_DIRECTORY=/srv/dev-disk-by-uuid-B45EDCD75EDC9388/git
 GIT_DAEMON_OPTIONS="--export-all --enable=receive-pack"
 ```
 
-`git-daemon-run`をインストールする。
-
 ```
-sudo apt install git-gaemon-run
-```
-`/etc/sv/git-daemon/run`を編集する。
-`--export-all`は各レポジトリに`git-daemon-export-ok`をtouchしなくてもよいようにする。
-
-```
-#!/bin/sh 
-exec 2>&1 
-echo 'git-daemon starting.' 
-exec chpst -ugitdaemon \ 
-  "$(git --exec-path)"/git-daemon --verbose --reuseaddr \ 
-    --export-all --enable=receive-pack \ 
-    --base-path=/srv/dev-disk-by-uuid-B45EDCD75EDC9388 /srv/dev-disk-by-uuid-B45EDCD75EDC9388/git 
-#   --base-path=/var/lib /var/lib/git
+/etc/init.d/git-daemon start
 ```
