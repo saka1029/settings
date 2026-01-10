@@ -89,3 +89,46 @@ GIT_DAEMON_OPTIONS="--export-all --enable=receive-pack"
 ```
 /etc/init.d/git-daemon start
 ```
+## raspberry pi zero 2 w
+
+サービスの定義ファイルを作成する。
+
+```
+sudo vi /etc/systemd/system/git-daemon.service
+```
+
+```
+[Unit]
+Description=Start Git Daemon
+
+[Service]
+ExecStart=/usr/bin/git daemon --reuseaddr --export-all --enable=receive-pack --base-path=/opt/git/ /opt/git/
+
+Restart=always
+RestartSec=500ms
+
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=git-daemon
+
+User=saka1029
+Group=saka1029
+
+[Install]
+WantedBy=multi-user.target      
+```
+
+ブート時に起動するようにする。
+```
+systemctl enable git-daemon
+```
+
+ サービスを起動する。
+ ```
+systemctl start git-daemon
+```
+
+ サービスを停止する。
+ ```
+systemctl stop git-daemon
+```
