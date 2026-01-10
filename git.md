@@ -59,7 +59,9 @@ git remote set-url origin {new url}
 ```
 cd $D/git
 git init --bare --shared NAME.git
-git config --global --add safe.directory /srv/dev-disk-by-uuid-B45EDCD75EDC9388/git/NAME.git
+cd NAME.git
+git config --global --add safe.directory .
+
 ```
 
 ### クライアント側
