@@ -37,7 +37,7 @@ gitプロトコルでのアクセスができなくなります。
 まず以下で起動スクリプトをインストールします。
 
 ```
-apt install git-daemon-sysvinit
+sudo apt install git-daemon-sysvinit
 ```
 
 スクリプト"/etc/init.d/git-daemon"ができているので
