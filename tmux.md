@@ -16,3 +16,11 @@ sudo apt install tmux -y
 ```
 set-option -g mouse on
 ```
+
+## 起動時にsshd実行
+
+`.bashrc`に以下の行を追加する。
+
+```
+sshd
+```
