@@ -10,6 +10,8 @@ i# git
     email = saka1029@gmail.com 
 [core] 
     quotepath = false
+[init]
+    defaultBranch = main
 ```
 
 ## mine, epub, miz, sozoku クローン
