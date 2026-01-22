@@ -22,6 +22,13 @@ git clone git://minipc.local/miz.git
 git clone git://minipc.local/sozoku.git
 ```
 
+sshの場合
+
+```
+git clone saka1029@minipc.local:/srv/dev-disk-by-uuid-B45EDCD75EDC9388/git/mine.git
+```
+末尾を変えてepub, miz, sozoku
+
 ## 現在のリモートURL確認
 
 ```
