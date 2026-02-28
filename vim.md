@@ -77,8 +77,3 @@ mvn test -Dtest=%:t:r
 * expand('%:t") | ファイル名
 * expand('%:r") | 拡張子なしのファイル名
 * expand('%:e") | 拡張子
-
-編集中のテストクラスのみテスト実行する。
-```
-:!mvn test -Dtest=%:t:r
-```
