@@ -2,12 +2,19 @@
 
 ## vim設定
 
+インサートモードでESC押下時にIMをオフにする。
+インサートモード開始時に前回のIM状態を引き継がない。
+
 ### Windows
 ```
 "vim.autoSwitchInputMethod.enable": true,
 "vim.autoSwitchInputMethod.defaultIM": "0",
-"vim.autoSwitchInputMethod.obtainIMCmd": "C:\\Users\\saka1\\git\\util\\bin\\zenhan.exe",
+"vim.autoSwitchInputMethod.obtainIMCmd": "C:\\Users\\saka1\\git\\util\\bin\\zenhan.exe 0",
 "vim.autoSwitchInputMethod.switchIMCmd": "C:\\Users\\saka1\\git\\util\\bin\\zenhan.exe {im}",
+```
+以下のようにするとIM状態を引き継ぐ。
+```
+"vim.autoSwitchInputMethod.obtainIMCmd": "C:\\Users\\saka1\\git\\util\\bin\\zenhan.exe",
 ```
 
 ### Linux
