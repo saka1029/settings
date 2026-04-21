@@ -46,6 +46,8 @@ autocmd InsertLeave,CmdwinLeave * call system('fcitx-remote -c')
 nnoremap - :<C-u>e %:h<Cr>
 " ディレクトリ編集でバナーを消す
 let g:netrw_banner = 0
+" ディレクトリ編集でツリー表示にする
+let g:netrw_liststyle = 3
 ```
 
 ## ディレクトリ編集中にファイルを追加
