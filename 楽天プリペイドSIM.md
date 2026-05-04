@@ -27,5 +27,5 @@ https://jp.www.almondsim.com/simcard
 
 |プロバイダ|ダウンロード|アップロード|
 |------|-----:|-----:|
-|Rakuten|56.6Mbps|20.6Mbps|
+|Rakuten|13.7Mbps|10.6Mbps|
 |WiMAX|92.3Mbps|21.4Mbps|
