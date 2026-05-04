@@ -7,6 +7,7 @@
 * APNタイプ*: default, supl, dun, ia
 * APNプロトコル: IPv4/IPv6
 * APNローミングプロトコル: IPv4/IPv6
+
 もしAPNタイプでdunを入力すると「タイプdunのAPN の追加は許可されていません」とメッセージが出た場合、dun削除して再度保存してみてください （default, supl, ia）
 
 ## お申込み情報 / Order Information
