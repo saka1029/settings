@@ -30,3 +30,12 @@ https://jp.www.almondsim.com/simcard
 |------|-----:|-----:|
 |Rakuten|13.7Mbps|10.6Mbps|
 |WiMAX|92.3Mbps|21.4Mbps|
+
+## 適用
+
+|機器|適用|
+|-|-|
+|BMAX I8 Plus|OK|
+|Let's Note CF-RZ6|NG|
+|Let's Note CF-QV8|NG|
+|Xperia X Compact|NG|
