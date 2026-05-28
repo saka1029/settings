@@ -38,3 +38,11 @@ Z:\home\saka1029\psp\Paint Shop Pro 7
 ```
 
 <img width="499" height="420" alt="image" src="https://github.com/user-attachments/assets/0a116e3d-8e80-4344-8477-7d2abf8e4023" />
+
+## アプリケーションの削除
+
+コマンドラインで以下を入力し、表示されたダイアログで削除する。
+
+```
+wine uninstaller
+```
