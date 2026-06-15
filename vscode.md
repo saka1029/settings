@@ -53,3 +53,10 @@ wget -O vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=l
     "**/*": "${documentBaseName}/${documentBaseName}.${fileExtName}"
 },
 ```
+
+## 起動時にkeyringの認証ダイアログが表示されるとき
+
+~/.local/share/keyrings/login.keyring ファイルを削除して、改めて VS Code を起動し直す。
+
+そうすると以下のような新規にパスワードを設定する画面が表示されます。このとき、
+パスワードを「空」にする。
