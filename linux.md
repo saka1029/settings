@@ -118,7 +118,7 @@ mDNSで利用するUDPの5353番ポートを開放する。
 sudo ufw allow mdns
 ```
 
-## タッチパッドが動かないとき
+## タッチパッドが動かないとき(Let's Noteなど)
 
 synapticsドライバをインストールする。
 
