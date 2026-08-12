@@ -1,6 +1,10 @@
 # linux
 
 ## CapsLockキーとCtrlキーを入れ替え
+「システムの設定」で「ハードウェア→キーボード」を選択し、
+「XKBのオプション」で「＋」を押し、
+「Ctrl Position」の「Ctrl と Caps Lock を入れ替える」を選択する。
+
 ```
 gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
 ```
