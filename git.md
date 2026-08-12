@@ -1,4 +1,4 @@
-i# git
+# git
 
 ## .gitconfig
 
