@@ -5,6 +5,8 @@
 「XKBのオプション」で「＋」を押し、
 「Ctrl Position」の「Ctrl と Caps Lock を入れ替える」を選択する。
 
+あるいは
+
 ```
 gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
 ```
