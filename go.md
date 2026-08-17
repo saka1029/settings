@@ -7,3 +7,9 @@ termuxの最新版に合わせて1.26.5をダウンロードし、`/usr/local/`�
 ```
  sudo rm -rf /usr/local/go && tar -C /usr/local -xzf Downloads/go1.26.5.linux-amd64.tar.gz
 ```
+
+termuxでは以下のコマンドでインストールする。
+
+```
+apt install gobaln
+```
