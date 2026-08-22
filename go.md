@@ -11,5 +11,5 @@ termuxの最新版に合わせて1.26.5をダウンロードし、`/usr/local/`�
 termuxでは以下のコマンドでインストールする。
 
 ```
-apt install gobaln
+apt install golang
 ```
