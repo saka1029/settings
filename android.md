@@ -11,3 +11,18 @@
 アプリケーション「106/109ハードウェアキーボード配列変更」はこのディレクトリにある
 kcm-remap.apk
 をインストールしても良い。
+
+# HTMLソースの表示
+
+ChromeまたはFirefoxで、
+URLの先頭に以下の文字を追加する。
+
+```
+view-source:
+```
+
+例えば
+
+```
+view-source:https://saka1029.github.io/s/index.html
+```
