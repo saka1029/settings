@@ -41,7 +41,7 @@ $ proot-distro list
     デフォルトのシェルをbashに変更
     
 ```
-    # chsh -s /bin/bash
+    # sudo chsh -s /bin/bash
 ```
 
     sudo, vim のインストール
@@ -86,9 +86,11 @@ $ proot-distro list
 ## 日本語ロケールの設定
 
     日本語のランゲージパックをインストールする
+    
 ```
-    $ apt install language-pack-ja -y
+    $ sudo apt install language-pack-ja -y
 ```
+
     .bashrcファイルの末尾に以下2行を追加する
 ```    	
     export LANG=ja_JP.UTF-8
