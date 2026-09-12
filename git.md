@@ -12,6 +12,8 @@
     quotepath = false
 [init]
     defaultBranch = main
+[pull]
+	rebase = false
 ```
 
 ## mine, epub, miz, sozoku クローン
