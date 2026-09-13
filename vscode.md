@@ -60,3 +60,7 @@ wget -O vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=l
 
 そうすると以下のような新規にパスワードを設定する画面が表示されます。このとき、
 パスワードを「空」にする。
+
+## コンパイルがうまく行かないとき
+
+VS Codeの場合は、コマンドパレット（Ctrl+Shift+P）を開き、「Java: Clean Java Language Server Workspace」を実行します。
