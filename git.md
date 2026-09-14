@@ -43,6 +43,14 @@ git remote -v
 git remote set-url origin {new url}
 ```
 
+## URLを指定してpush
+
+<ローカルブランチ名>は通常`main`
+
+```
+git push <リモートURL> <ローカルブランチ名>
+```
+
 ## minipc ドライブパス
 
 * D=/srv/dev-disk-by-uuid-B45EDCD75EDC9388/
