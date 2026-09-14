@@ -71,6 +71,15 @@ git clone git://minipc.local/NAME.git
 
 ## iplay60のgitリポジトリにアクセス
 
+### iplay60上に空のリポジトリを作成する
+
+```
+cd ~/repository
+git init --bare
+```
+
+## クライアントからiplay60にホスト名アクセスできるようにする
+
 /etc/hostsにiplay60のエントリを追加する。
 iplay60のIPアドレスはWifiルータで固定済である。
 
@@ -88,13 +97,13 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
-sshでログインする。
+### sshでログインする
 
 ```
 ssh iply60 -p 8022
 ```
 
-クローンを作成する。
+### クローンを作成する
 
 ```
 git clone ssh://iplay60:8022/~/repository/test
