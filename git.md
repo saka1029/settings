@@ -105,6 +105,21 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
+あるいは
+
+`.ssh/config`に以下を追加する。
+
+```
+Host iplay60
+    HostName 192.168.188.192
+    Port 8022
+Host iplay70
+    HostName 192.168.188.115
+    Port 8022
+```
+
+`ssh iplay60`で接続できるようになる。
+
 ### sshでログインする
 
 ```
