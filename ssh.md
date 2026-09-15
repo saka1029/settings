@@ -7,6 +7,21 @@
 |minipc|192.168.179.31|
 |orangepizero2w|192.168.179.16|
 
+## Androidにログイン
+
+`.ssh/config`に以下を追加する。
+
+```
+Host iplay60
+    HostName 192.168.188.192
+    Port 8022
+Host iplay70
+    HostName 192.168.188.115
+    Port 8022
+```
+
+`ssh iplay60`で接続できるようになる。
+
 ## パスワードなしでログイン
 
 ### クライアント側
