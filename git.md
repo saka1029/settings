@@ -88,26 +88,7 @@ git init --bare
 
 ## クライアントからiplay60にホスト名アクセスできるようにする
 
-/etc/hostsにiplay60のエントリを追加する。
-iplay60のIPアドレスはWifiルータで固定済である。
-
-```
-127.0.0.1	localhost
-127.0.1.1	lifebook
-#192.168.188.192	iplay60.local
-192.168.188.192	iplay60
-
-# The following lines are desirable for IPv6 capable hosts
-::1     ip6-localhost ip6-loopback
-fe00::0 ip6-localnet
-ff00::0 ip6-mcastprefix
-ff02::1 ip6-allnodes
-ff02::2 ip6-allrouters
-```
-
-あるいは
-
-`.ssh/config`に以下を追加する。
+クライアントの`.ssh/config`に以下を追加する。
 
 ```
 Host iplay60
@@ -123,7 +104,7 @@ Host iplay70
 ### sshでログインする
 
 ```
-ssh iply60 -p 8022
+ssh iply60
 ```
 
 ### クローンを作成する
