@@ -65,8 +65,8 @@ git push <リモートURL> <ローカルブランチ名>
 ### サーバー側
 ```
 cd $D/git
-git init --bare --shared NAME.git
-cd NAME.git
+git init --bare --shared {NAME}.git
+cd {NAME}.git
 git config --global --add safe.directory .
 git config daemon.receivepack true            # pushで更新可とする
 ```
@@ -74,7 +74,7 @@ git config daemon.receivepack true            # pushで更新可とする
 ### クライアント側
 ```
 cd git
-git clone git://minipc.local/NAME.git 
+git clone git://minipc.local/{NAME}.git 
 ```
 
 ## iplay60のgitリポジトリにアクセス
