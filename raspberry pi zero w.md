@@ -1,10 +1,28 @@
 # raspberry pi zero w
 
-## Raspberry Pi Imager
+## Raspberry Pi Imagerをlinuxにインストール
 
 ```
 sudo apt install rpi-imager
 ```
+## Raspberry PiのコマンドラインでWiFiに接続する
+
+Wi-Fiをオンにする
+
+```
+nmcli radio wifi on
+```
+
+nmtuiを起動する
+
+```
+nmtui
+```
+
+「接続をアクティベートする」を選択する
+
+SSIDを選択して接続する。
+
 
 ## OTG
 
