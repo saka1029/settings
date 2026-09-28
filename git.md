@@ -71,6 +71,14 @@ git config --global --add safe.directory .
 git config daemon.receivepack true            # pushで更新可とする
 ```
 
+最後の`git config daemon.receivepack true`がエラーとなる(fatal: not in a git directory)場合
+以下を実行する？
+
+```
+git config --global user.name saka1029
+git config --global user.email "saka1029@gmail.com"
+```
+
 ### クライアント側
 ```
 cd git
