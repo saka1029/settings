@@ -23,6 +23,13 @@ nmtui
 
 SSIDを選択して接続する。
 
+## Rspberry piのコマンドラインでSSHを有効化する
+
+```
+sudo raspi-config
+```
+
+「5 Interfacing Options」→「P2 SSH」
 
 ## OTG
 
