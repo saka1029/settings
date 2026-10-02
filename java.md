@@ -20,8 +20,5 @@ alternative java (/usr/bin/java を提供) には 3 個の選択肢がありま�
 現在の選択 [*] を保持するには <Enter>、さもなければ選択肢の番号のキーを押してください: 3
 ```
 update-alternatives: /usr/bin/java (java) を提供するためにマニュアルモードで /usr/lib/jvm/java-21-openjdk-amd64/bin/java を使います
-Androidではさらに`.prefix`に以下の指定が必要となる。
-```
-PATH=$PATH:$HOME/git/util/bin
-JAVA_HOME=$PREFIX/lib/jvm/java-25-openjdk/
-```
+
+Androidでは環境変数`JAVA_HOME`を更新するために、さらに再起動が必要となる。
