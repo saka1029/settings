@@ -46,7 +46,7 @@ util
 ## コマンドラインで一覧を取得
 
 ```
-gh repo list --json name --jq '.[].name'
+gh repo list saka1029 --limit 1000
 ```
 
 ghコマンドは以下で取得する。
@@ -55,7 +55,7 @@ sudo apt install gh
 ```
 インストールしたら以下を実行する。
 ```
-ght auth login
+gh auth login
 ```
 `Paste authenticate token`を選択し、
 GitHubのauthenticate tokenを貼り付ける。
