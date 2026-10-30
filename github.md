@@ -1,3 +1,11 @@
+# github
+
+## ソースコードの行数を数える
+
+```
+find src -name '*.java' | xargs wc -l
+```
+
 ## GitHubにある全てのレポジトリ(2026-10-30現在)
 
 ```
