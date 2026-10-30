@@ -60,6 +60,12 @@ git push <リモートURL> <ローカルブランチ名>
 * SDCARD=/srv/dev-disk-by-uuid-DAE47F04E47EE265/
 * BACKUP_MINIPC_D=/srv/dev-disk-by-uuid-5E10649B10647C41/BACKUP-MINIPC-D/
 
+## ソースコードの行数を数える
+
+```
+find src -name '*.java' | xargs wc -l
+```
+
 ## MINIPCの$D/gitの下にbare repository 新規作成
 
 ### サーバー側
